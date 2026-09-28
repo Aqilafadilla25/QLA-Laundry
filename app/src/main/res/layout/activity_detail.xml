@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="Tentang Cimol"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/cimol"
+        android:scaleType="centerCrop"
+        android:contentDescription="Gambar Cimol"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cimol"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Cimol merupakan salah satu jajanan khas Indonesia yang dibuat dari tepung tapioka. Cimol biasanya berbentuk bulat dan digoreng hingga bagian luarnya renyah. Cimol dapat diberi berbagai macam bumbu seperti balado, keju, barbeque dan pedas."
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Komposisi"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="• Tepung tapioka&#10;• Tepung terigu&#10;• Bawang putih&#10;• Garam&#10;• Air&#10;• Minyak goreng&#10;• Bumbu tambahan"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="InformasiGizi"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dalam satu porsi cimol, kandungan gizinya terutama berasal dari karbohidrat dan lemak. Nilai gizi dapat berbeda tergantung ukuran porsi, bahan, dan banyaknya minyak yang digunakan."
+        android:textSize="16sp"/>
+
+</LinearLayout>
