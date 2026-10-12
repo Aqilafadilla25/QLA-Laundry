@@ -22,6 +22,16 @@ class DetailActivity : AppCompatActivity() {
         btnBukaWebView.setOnClickListener {
             val intent = Intent(this, WebActivity::class.java)
             startActivity(intent)
+
+        }
+
+ // Tombol 3: Profil Developer
+        val btnProfileDeveloper =
+            findViewById<Button>(R.id.btnKembali)
+
+        btnProfileDeveloper.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
     }
 }

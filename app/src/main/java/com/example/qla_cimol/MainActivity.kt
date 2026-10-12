@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,16 +19,52 @@ class MainActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             val username = etUsername.text.toString().trim()
-            val password = etPassword.text.toString().trim()
+            val password = etPassword.text.toString()
 
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Mohon isi Username dan Password!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show()
-                // Pindah ke Halaman Detail Cimol
-                val intent = Intent(this, DetailActivity::class.java)
+
+                Toast.makeText(
+                    this,
+                    "Mohon isi Username dan Password!",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            } else if (
+                username == "aqila" && password == "123"
+            ) {
+
+                // Simpan status login
+                val pref = getSharedPreferences(
+                    "user_pref",
+                    MODE_PRIVATE
+                )
+
+                pref.edit()
+                    .putBoolean("isLogin", true)
+                    .apply()
+
+                Toast.makeText(
+                    this,
+                    "Login Berhasil!",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                // Pindah ke halaman Detail
+                val intent = Intent(
+                    this,
+                    DetailActivity::class.java
+                )
                 startActivity(intent)
-                finish() // Agar user tidak bisa kembali ke screen login saat menekan tombol back
+                finish()
+
+            } else {
+
+                // Username atau password salah
+                Toast.makeText(
+                    this,
+                    "Username atau password salah!",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
