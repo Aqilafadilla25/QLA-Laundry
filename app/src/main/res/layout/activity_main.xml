@@ -1,33 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#FDEBF3"
     android:gravity="center"
-    android:padding="24dp">
+    android:orientation="vertical"
+    android:padding="28dp">
+
+    <!-- JUDUL -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laundry Express"
+        android:textColor="#E91E63"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="CIMOL QILA"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="32dp"
+        android:text="Silakan masuk untuk melanjutkan"
+        android:textColor="#666666"
+        android:textSize="14sp" />
 
-    <ImageView
-        android:id="@+id/imgCimol"
-        android:layout_width="280dp"
-        android:layout_height="200dp"
-        android:src="@drawable/cimol"
-        android:scaleType="centerCrop"
-        android:contentDescription="Gambar Cimol"
-        android:layout_marginBottom="25dp" />
-
-    <Button
-        android:id="@+id/btnMyProject"
-        android:layout_width="wrap_content"
+    <!-- INPUT USERNAME -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Project" />
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <!-- INPUT PASSWORD -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <!-- TOMBOL LOGIN -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E91E63"
+        android:padding="12dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

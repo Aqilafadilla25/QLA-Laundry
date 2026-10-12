@@ -1,77 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FDEBF3">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="228dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:text="Tentang Cimol"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView2"
+    <!-- KONTEN UTAMA (BISA DI-SCROLL) -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/cimol"
-        android:scaleType="centerCrop"
-        android:contentDescription="Gambar Cimol"
-        android:layout_marginBottom="10dp" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView4"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER USER & PROFIL -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hallo Kak!"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laundry bersih, hidup lebih praktis"
+                        android:textSize="13sp"
+                        android:textColor="#555555"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <!-- ICON PROFIL AKUN KANAN ATAS -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Profil Akun"
+                    app:tint="#000000" />
+            </RelativeLayout>
+
+            <!-- BANNER PROMO / BANNER UTAMA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laundry jauh\nlebih mudah!"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pilih layanan,tentukan berat,\nkami yang urus sisanya"
+                        android:textSize="12sp"
+                        android:textColor="#555555"
+                        android:layout_marginBottom="14dp"/>
+
+                    <!-- TOMBOL PESAN LAUNDRY -->
+                    <Button
+                        android:id="@+id/btnBukaWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="Pesan Laundry →"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                </LinearLayout>
+
+                <!-- GAMBAR LAUNDRY -->
+                <ImageView
+                    android:layout_width="137dp"
+                    android:layout_height="143dp"
+                    android:contentDescription="Logo Laundry"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+
+            <!-- SECTION LAYANAN KAMI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Layanan Kami"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <!-- LAYANAN 1: CUCI KERING -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/mesincuci"
+                        android:contentDescription="Cuci Kering" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuci Kering"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+                <!-- LAYANAN 2: CUCI SETRIKA -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/setrika"
+                        android:contentDescription="Cuci Setrika"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuci Setrika"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+                <!-- LAYANAN 3: EXPRESS -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/express"
+                        android:contentDescription="Express" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Express"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- TOMBOL BUKA HALAMAN WEB -->
+            <Button
+                android:id="@+id/btnBukaWebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:padding="12dp"
+                android:text="Buka Website Laundry"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION (NAVIGASI BAWAH) -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cimol"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"/>
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="374dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Cimol merupakan salah satu jajanan khas Indonesia yang dibuat dari tepung tapioka. Cimol biasanya berbentuk bulat dan digoreng hingga bagian luarnya renyah. Cimol dapat diberi berbagai macam bumbu seperti balado, keju, barbeque dan pedas."
-        android:textSize="16sp" />
+        <!-- TAB HOME -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Komposisi"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="#4CAF50" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="• Tepung tapioka&#10;• Tepung terigu&#10;• Bawang putih&#10;• Garam&#10;• Air&#10;• Minyak goreng&#10;• Bumbu tambahan"
-        android:textSize="16sp"
-        android:layout_marginBottom="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#4CAF50"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="InformasiGizi"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <!-- TAB PESANAN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dalam satu porsi cimol, kandungan gizinya terutama berasal dari karbohidrat dan lemak. Nilai gizi dapat berbeda tergantung ukuran porsi, bahan, dan banyaknya minyak yang digunakan."
-        android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_agenda"
+                app:tint="#666666" />
 
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesanan"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- TAB ACCOUNT -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
