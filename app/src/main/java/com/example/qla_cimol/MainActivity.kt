@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 // Pindah ke halaman Detail
                 val intent = Intent(
                     this,
-                    DetailActivity::class.java
+                    BaseActivity::class.java
                 )
                 startActivity(intent)
                 finish()
