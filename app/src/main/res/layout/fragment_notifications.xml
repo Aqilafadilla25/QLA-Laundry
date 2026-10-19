@@ -33,17 +33,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:background="#E91E63"
+            android:background="#F65DCF"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="18dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:gravity="center"
-                android:text="🔔"
-                android:textSize="28sp" />
+                android:src="@drawable/notifications"
+                android:scaleType="fitCenter"
+                android:contentDescription="Ikon notifikasi" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -91,15 +91,14 @@
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="#DDF5E5"
+                android:background="@android:color/transparent"
                 android:gravity="center"
-                android:text="✓"
-                android:textColor="#208449"
-                android:textSize="26sp"
-                android:textStyle="bold" />
+                android:src="@drawable/ceklis"
+                android:scaleType="fitCenter"
+                android:contentDescription="Ikon pesanan selesai" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -144,14 +143,14 @@
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="#FFF0D6"
-                android:gravity="center"
-                android:text="🧺"
-                android:textSize="24sp" />
-
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:src="@drawable/proses"
+                android:scaleType="fitCenter"
+                android:contentDescription="Pesanan sedang diproses" />
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -195,14 +194,14 @@
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <TextView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="#DCEBFF"
-                android:gravity="center"
-                android:text="📦"
-                android:textSize="24sp" />
-
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:src="@drawable/diterima"
+                android:scaleType="fitCenter"
+                android:contentDescription="Pesanan berhasil diterima" />
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -217,14 +216,6 @@
                     android:textColor="#29212A"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Pesanan #LE003 sudah masuk. Kami akan segera memprosesnya."
-                    android:textColor="#6D5963"
-                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -256,12 +247,16 @@
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <TextView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:gravity="center"
-                android:text="🎉"
-                android:textSize="28sp" />
+                android:src="@drawable/promo"
+                android:scaleType="fitCenter"
+                android:padding="4dp"
+                android:contentDescription="Ikon promo" />
+
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -287,6 +282,14 @@
                     android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Pesanan #LE003 sudah masuk. Kami akan segera memprosesnya."
+            android:textColor="#6D5963"
+            android:textSize="13sp" />
 
     </LinearLayout>
 </ScrollView>

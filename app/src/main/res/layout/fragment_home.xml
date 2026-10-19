@@ -1,204 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCEAF2"
-    android:fillViewport="true">
+    android:background="#FDEBF3">
 
-    <LinearLayout
+    <!-- KONTEN UTAMA -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <!-- Sapaan -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <!-- HEADER USER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hallo Kak!"
-                    android:textColor="#29212A"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hallo Kak!"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laundry bersih, hidup lebih praktis"
+                        android:textSize="13sp"
+                        android:textColor="#555555"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+                <!-- ICON PROFIL KANAN ATAS -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Profil Akun"
+                    app:tint="#000000" />
+
+            </RelativeLayout>
+
+            <!-- BANNER PROMO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="18dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Laundry bersih, hidup lebih praktis"
-                    android:textColor="#6D5963"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laundry jauh&#10;lebih mudah!"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pilih layanan,tentukan berat,&#10;kami yang urus sisanya"
+                        android:textSize="12sp"
+                        android:textColor="#555555"
+                        android:layout_marginBottom="14dp"/>
+
+                    <!-- TOMBOL PESAN LAUNDRY -->
+                    <Button
+                        android:id="@+id/btnBukaWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FFFFFF"
+                        android:text="Pesan Laundry →"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+
+                </LinearLayout>
+
+                <!-- GAMBAR LAUNDRY -->
+                <ImageView
+                    android:layout_width="137dp"
+                    android:layout_height="143dp"
+                    android:contentDescription="Logo Laundry"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/logo" />
+
             </LinearLayout>
 
+            <!-- JUDUL LAYANAN -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="👥"
-                android:textSize="28sp" />
+                android:text="Layanan Kami"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="14dp"/>
 
-        </LinearLayout>
-
-        <!-- Banner Laundry -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:background="#F6DDF5"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp">
-
+            <!-- DAFTAR LAYANAN -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Laundry jauh lebih mudah!"
-                    android:textColor="#29212A"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Pilih layanan, tentukan berat, kami yang urus sisanya."
-                    android:textColor="#6D5963"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/btnPesanLaundryHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:text="Pesan Laundry →"
-                    android:textAllCaps="false"
-                    android:textColor="#E91E63"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="112dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="8dp"
-                android:contentDescription="Ilustrasi laundry"
-                android:scaleType="fitCenter"
-                android:src="@drawable/express" />
-
-        </LinearLayout>
-
-        <!-- Judul layanan -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:layout_marginBottom="14dp"
-            android:text="Layanan Kami"
-            android:textColor="#29212A"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Tiga layanan -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F6DDF5"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="14dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="4dp">
+                android:layout_marginBottom="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- LAYANAN 1: CUCI KERING -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="🧺"
-                    android:textSize="28sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Cuci Kering"
-                    android:textColor="#29212A"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="4dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/mesincuci"
+                        android:contentDescription="Cuci Kering" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuci Kering"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
+                <!-- LAYANAN 2: CUCI SETRIKA -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="👕"
-                    android:textSize="28sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Cuci Setrika"
-                    android:textColor="#29212A"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="4dp">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/setrika"
+                        android:contentDescription="Cuci Setrika"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuci Setrika"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
+                <!-- LAYANAN 3: EXPRESS -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="🚚"
-                    android:textSize="28sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Express"
-                    android:textColor="#29212A"
-                    android:textSize="12sp" />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/express"
+                        android:contentDescription="Express" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Express"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
 
+    </ScrollView>
 
-
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>
