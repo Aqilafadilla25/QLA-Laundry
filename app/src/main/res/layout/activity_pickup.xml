@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCEBF2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jemput dan Antar Laundry"
+            android:textColor="#242124"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi data untuk menjadwalkan penjemputan pakaian kamu."
+            android:textColor="#777777"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etNamaPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama lengkap"
+            android:inputType="textPersonName"
+            android:backgroundTint="#D85B91"/>
+
+        <EditText
+            android:id="@+id/etHpPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor handphone"
+            android:inputType="phone"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#D85B91"/>
+
+        <EditText
+            android:id="@+id/etAlamatPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat penjemputan lengkap"
+            android:inputType="textPostalAddress|textMultiLine"
+            android:minLines="2"
+            android:gravity="top"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#D85B91"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Penjemputan"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnTanggalPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Tanggal"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E91E63"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam Penjemputan"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnWaktuPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Waktu"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E91E63"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Layanan"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgLayananPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbJemput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jemput saja"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbJemputAntar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jemput dan antar"/>
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etCatatanPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Catatan tambahan (opsional)"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:gravity="top"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#D85B91"/>
+
+        <Button
+            android:id="@+id/btnKonfirmasiPickup"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Konfirmasi Pesanan"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#E91E63"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
