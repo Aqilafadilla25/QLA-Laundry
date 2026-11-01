@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCEAF2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verifikasi OTP"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#202020"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukkan kode OTP berupa nomor handphone yang kamu daftarkan."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginBottom="28dp" />
+
+        <EditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Kode OTP"
+            android:inputType="number"
+            android:maxLength="15"
+            android:padding="12dp"
+            android:backgroundTint="#E91E63" />
+
+        <Button
+            android:id="@+id/btnVerifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Verifikasi"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#E91E63"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>
