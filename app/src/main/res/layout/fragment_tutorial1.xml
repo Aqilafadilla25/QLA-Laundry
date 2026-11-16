@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="#FCEAF2">
+
+    <!-- Logo Qla Cimol -->
+    <ImageView
+        android:layout_width="242dp"
+        android:layout_height="204dp"
+        android:layout_gravity="center"
+        android:contentDescription="Logo Qla Cimol"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selamat Datang di Laundry Express"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#C2185B"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Solusi laundry praktis, bersih, dan nyaman untuk pakaian kesayanganmu."
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:lineSpacingExtra="6dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#FDEBF3">
 
-    <!-- KONTEN UTAMA -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,12 +44,9 @@
                         android:layout_height="wrap_content"
                         android:text="Laundry bersih, hidup lebih praktis"
                         android:textSize="13sp"
-                        android:textColor="#555555"
-                        android:layout_marginTop="2dp"/>
-
+                        android:textColor="#555555"/>
                 </LinearLayout>
 
-                <!-- ICON PROFIL -->
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
@@ -59,7 +55,6 @@
                     android:layout_centerVertical="true"
                     android:contentDescription="Profil Akun"
                     app:tint="#000000"/>
-
             </RelativeLayout>
 
             <!-- BANNER PROMO -->
@@ -90,12 +85,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="pilih layanan,tentukan berat,&#10;kami yang urus sisanya"
+                        android:text="Pilih layanan, tentukan berat,&#10;kami yang urus sisanya"
                         android:textSize="12sp"
                         android:textColor="#555555"
                         android:layout_marginBottom="14dp"/>
 
-                    <!-- TOMBOL PESAN LAUNDRY -->
                     <Button
                         android:id="@+id/btnBukaWeb"
                         android:layout_width="wrap_content"
@@ -107,162 +101,59 @@
                         android:textSize="12sp"
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"/>
-
                 </LinearLayout>
 
-                <!-- GAMBAR LAUNDRY -->
                 <ImageView
-                    android:layout_width="137dp"
-                    android:layout_height="143dp"
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
                     android:contentDescription="Logo Laundry"
                     android:scaleType="centerInside"
                     android:src="@drawable/logo"/>
-
             </LinearLayout>
 
-            <!-- JUDUL LAYANAN -->
+            <!-- JUDUL GRID -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Layanan Kami"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
-                android:layout_marginBottom="14dp"/>
+                android:layout_marginBottom="12dp"/>
 
-            <!-- DAFTAR LAYANAN -->
-            <LinearLayout
+            <!-- GRID LAYANAN MENGGUNAKAN CUSTOM ADAPTER -->
+            <GridView
+                android:id="@+id/gridFitur"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/bg_card"
-                android:padding="16dp"
+                android:layout_height="430dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp"
+                android:horizontalSpacing="12dp"
+                android:stretchMode="columnWidth"
                 android:gravity="center"
-                android:layout_marginBottom="20dp">
+                android:padding="4dp"
+                android:clipToPadding="false"
+                android:scrollbars="none"/>
 
-                <!-- CUCI KERING -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/mesincuci"
-                        android:contentDescription="Cuci Kering"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cuci Kering"
-                        android:textSize="12sp"
-                        android:textColor="#000000"
-                        android:layout_marginTop="8dp"/>
-
-                </LinearLayout>
-
-                <!-- CUCI SETRIKA -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/setrika"
-                        android:contentDescription="Cuci Setrika"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cuci Setrika"
-                        android:textSize="12sp"
-                        android:textColor="#000000"
-                        android:layout_marginTop="8dp"/>
-
-                </LinearLayout>
-
-                <!-- EXPRESS -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/express"
-                        android:contentDescription="Express"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Express"
-                        android:textSize="12sp"
-                        android:textColor="#000000"
-                        android:layout_marginTop="8dp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- FITUR BARU: JEMPUT DAN ANTAR -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Layanan Tambahan"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:layout_marginBottom="10dp"/>
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/bg_card"
-                android:padding="16dp"
-                android:layout_marginBottom="20dp">
+                android:text="Informasi Laundry"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="🚚 Jemput dan Antar Laundry"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLaundryInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tidak perlu datang ke laundry! Kami siap menjemput pakaian kamu."
-                    android:textSize="12sp"
-                    android:textColor="#555555"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="12dp"/>
-
-                <Button
-                    android:id="@+id/btnPickup"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:text="Pesan Jemput Sekarang"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:backgroundTint="#E91E63"/>
-
-            </LinearLayout>
 
         </LinearLayout>
-
     </ScrollView>
-
 </RelativeLayout>
