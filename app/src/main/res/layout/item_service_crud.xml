@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_card"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNamaLayanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuci Komplit Express"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tvHargaEstimasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 12.000 / kg • Estimasi 3 Jam"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEditService"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Edit"
+        android:textSize="11sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="6dp"/>
+
+    <Button
+        android:id="@+id/btnHapusService"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Hapus"
+        android:textSize="11sp"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
